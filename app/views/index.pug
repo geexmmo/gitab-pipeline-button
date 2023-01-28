@@ -1,0 +1,29 @@
+html
+  body
+    head
+      meta(charset='utf-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+      link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+      title Update button login
+      style.
+        body {
+          font-family: Verdana;
+          font-size: 13px;
+          background-color: #2b2a29;
+          color: #e7e6e6;
+        }
+    img(src=logo)
+    .container.d-flex.h-100.align-items-center.justify-content-center
+      div
+        .row.justify-content-center
+          h1.text-center Update button login page. Use AD credentials.
+        .row.justify-content-center
+          .col-sm-4
+            form(action='./login' method='post')
+              h1.h3.mb-3.font-weight-normal.text-center Sign in
+              .form-label-group
+                input#username.form-control.rounded-0(name='username' type='text' autocomplete='username' placeholder='Username' required='' autofocus='')
+              .form-label-group
+                input#password.form-control.rounded-0(name='password' type='password' autocomplete='current-password' placeholder='Password' required='')
+              div
+                input.btn.btn-lg.btn-primary.btn-block.rounded-0.mt-3(type='submit')

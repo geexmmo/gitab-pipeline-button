@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  app-prod:
+    container_name: update-button
+    image: update-button:latest
+    restart: always
+
+
+networks:
+  default:
+    name: prod-network
+    external: true

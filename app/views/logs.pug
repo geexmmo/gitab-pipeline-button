@@ -1,0 +1,55 @@
+html
+  body
+    head
+      meta(charset='utf-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+      meta(name='description' content='ldap-authentication testing')
+      meta(name='author' content='Jingshao Chen')
+      link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+      title Update button
+      style.
+        body { 
+          background-color: #2b2a29;
+        }
+        .base {
+          display: flex;
+          flex-direction: column;
+        }
+        .info {
+          font-family: Verdana;
+          font-size: 13px;
+          background-color: #2b2a29;
+          color: #e7e6e6;
+        }
+        .dataoutput {
+          color: #a2a2a2;
+          background-color: #1d2022;
+        }
+        .logger {
+          overflow-y: scroll;
+        }
+        .buttons{
+        }
+  img(src=logo)
+  .container.base
+    .container.info
+      h1.display-6 Log view 
+    .container.dataoutput
+      div.row
+        each item in logsReturn
+          div.col-sm-6 Job: !{item.name} (!{item.id})
+      hr
+      div.row
+        each item in logsReturn
+          div.col-sm-6.logger !{item.status}
+    .container.buttons
+      div.d-flex
+        div.p-2
+          a.btn.justify-content-center.btn-info.rounded-0(href="./menu") Main
+        div.p-2
+          a.btn.justify-content-center.btn-info.rounded-0(href="./logs") Update
+        div.ml-auto.p-2
+          a.btn.justify-content-center.btn-primary.rounded-0(href="./logout") Sign Out
+        
+      
+      
